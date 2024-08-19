@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>NewsOnPoint</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+        <h1>NewsOnPoint</h1>
+
+    </nav>
+    <div class="wrapper">
+        <div class="newsContainer">
+
+            <article>
+                <h2>Times Of India</h2>
+                <% toiData.forEach((article)=> { %>
+                    <a href="<%= article.url %>" target="_blank" rel="noopener noreferrer">
+                        <h3>
+                            <%= article.title %>
+                        </h3>
+                        <img src="<%= article.imgSrc %>" alt="">
+                    </a>
+                    <hr>
+                    <% }) %>
+            </article>
+
+            <article>
+                <h2>Hindustan Times</h2>
+                <% hindustantimesData.forEach((article)=> { %>
+                    <a href="<%= article.url %>" target="_blank" rel="noopener noreferrer">
+                        <h3>
+                            <%= article.title %>
+                        </h3>
+                        <img src="<%= article.imgSrc %>" alt="">
+                    </a>
+                    <hr>
+                    <% }) %>
+            </article>
+
+            <article>
+                <h2>NDTV</h2>
+                <% ndtvData.forEach((article)=> { %>
+                    <a href="<%= article.url %>" target="_blank" rel="noopener noreferrer">
+                        <h3>
+                            <%= article.title %>
+                        </h3>
+                        <img src="<%= article.imgSrc %>" alt="">
+                    </a>
+                    <hr>
+                    <% }) %>
+            </article>
+
+
+
+        </div>
+    </div>
+    <div class="about">
+        <h2>About the site</h2>
+        <p>This is a news website created using HTML, CSS, and JavaScript. It displays news articles from various
+            sources. The news are scraped using puppteer. The fetched data is processed using node and express. The
+            final data is displayed on the website.</p>
+    </div>
+
+    <footer>
+
+        <div class="footer-info">
+
+            <div>
+                <p>Powered by</p>
+                <a href="https://www.npmjs.com/package/puppeteer" target="_blank">Puppeteer</a>
+                <a href="https://expressjs.com/" target="_blank">Express</a>
+            </div>
+
+            <div>
+                <p>Developer <a href="https://www.linkedin.com/in/tanishqkashla/" target="_blank">Tanishq Kashla</a></p>
+                <p>View Source Code on <a href="" target="_blank">Github</a> </p>
+            </div>
+        </div>
+        <p>Made with ❤️ by Tanishq Kashla</p>
+
+    </footer>
+
+</body>
+
+</html>
