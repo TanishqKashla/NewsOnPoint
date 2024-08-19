@@ -1,9 +1,9 @@
 import express from 'express';
 import path from 'path';
 import { promises as fs } from 'fs';
-import { toi } from "./TimesOfIndia.js";
-import { hindustantimes } from "./HindustanTimes.js";
-import { ndtv } from "./ndtv.js";
+import { toi } from './functions/TimesOfIndia.js';
+import { hindustantimes } from "./functions/HindustanTimes.js";
+import { ndtv } from "./functions/ndtv.js";
 import { fileURLToPath } from 'url';
 
 const app = express();
